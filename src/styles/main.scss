@@ -227,3 +227,50 @@ body {
   margin-bottom: 15px;
   line-height: 1.6;
 }
+
+
+/* ============================= */
+/* 📞 CONTACT SECTION */
+/* ============================= */
+
+.contact {
+  padding: 80px 20px;
+  background-color: var(--color-bg);
+  text-align: center;
+}
+
+.contact__content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  margin-bottom: 20px;
+}
+
+/* Liste */
+.contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Items */
+.contact li {
+  margin-bottom: 10px;
+}
+
+/* Liens */
+.contact a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
