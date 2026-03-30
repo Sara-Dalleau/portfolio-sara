@@ -1,4 +1,6 @@
+/* ==========================*/
 /* DESIGN SYSTEM - COULEURS */
+/* ======================= */
 
 :root {
   /* Couleur principale (utilisée pour éléments importants) */
@@ -20,9 +22,9 @@
   --color-text: #333;
 }
 
-
+/* ============== */
 /*  STYLE GLOBAL */
-
+/* ============ */
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
@@ -30,10 +32,9 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* ============================= */
-/* 🟦 HERO SECTION */
-/* ============================= */
-
+/* ===============*/
+/*  HERO SECTION */
+/* ============ */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -88,4 +89,28 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* =============== */
+/*  ABOUT SECTION */
+/* ============= */
+
+.about {
+  padding: 80px 20px;
+  background-color: var(--color-bg);
+}
+
+.about__content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  margin-bottom: 15px;
+  line-height: 1.6;
 }
