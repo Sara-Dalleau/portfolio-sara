@@ -1,0 +1,31 @@
+/* DESIGN SYSTEM - COULEURS */
+
+:root {
+  /* Couleur principale (utilisée pour éléments importants) */
+  --color-primary: #CCD5AE;
+
+  /* Couleur secondaire (hover, backgrounds légers) */
+  --color-secondary: #E9EDC9;
+
+  /* Background principal du site */
+  --color-bg: #FEFAE0;
+
+  /* Background des sections */
+  --color-section: #FAEDCD;
+
+  /* Couleur d’accent (boutons, éléments interactifs) */
+  --color-accent: #D4A373;
+
+  /* Couleur du texte */
+  --color-text: #333;
+}
+
+
+/*  STYLE GLOBAL */
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}

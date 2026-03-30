@@ -1,8 +1,20 @@
+import Hero from './sections/Hero'
+import About from './sections/About'
+import Skills from './sections/Skills'
+import Projects from './sections/Projects'
+import Parcours from './sections/Parcours'
+import Contact from './sections/Contact'
+
 function App() {
   return (
-    <div>
-      <h1>Portfolio Sara</h1>
-    </div>
+    <>
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Parcours />
+      <Contact />
+    </>
   )
 }
 
