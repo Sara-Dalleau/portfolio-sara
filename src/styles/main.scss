@@ -29,3 +29,63 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 }
+
+/* ============================= */
+/* 🟦 HERO SECTION */
+/* ============================= */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    var(--color-bg),
+    var(--color-section)
+  );
+}
+
+.hero__content {
+  max-width: 600px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Bouton */
+.hero button {
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.hero button:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+/* Animation apparition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
