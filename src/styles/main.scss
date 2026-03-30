@@ -202,3 +202,28 @@ body {
 .project-card p {
   line-height: 1.5;
 }
+
+/* ============================= */
+/*  PARCOURS SECTION */
+/* ============================= */
+
+.parcours {
+  padding: 80px 20px;
+  background-color: var(--color-section);
+}
+
+.parcours__content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.parcours h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.parcours p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
