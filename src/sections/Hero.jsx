@@ -1,13 +1,30 @@
+import bgImage from "../assets/hero1.png";
+
 function Hero() {
   return (
-    <section className="hero">
+    <div
+      className="hero"
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
       <div className="hero__content">
-        <h1>Sara Dalleau</h1>
-        <p>Développeuse web junior</p>
-        <button>Voir mes projets</button>
+        <h1>
+          Hello ! <br />
+          Moi c'est <span className="accent">Sara </span>
+        </h1>
+
+        <h2>Développeuse web junior</h2>
+
+        <p>
+        Construire, améliorer, donner vie à vos idées à travers le web.
+        </p>
+
+        <div className="hero__buttons">
+          <a href="#projects">Voir mes projets</a>
+          <a href="#contact" className="secondary">Me contacter</a>
+        </div>
       </div>
-    </section>
-  )
+    </div>
+  );
 }
 
-export default Hero
+export default Hero;

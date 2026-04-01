@@ -1,3 +1,5 @@
+import Header from "./components/Header";
+
 import Hero from './sections/Hero'
 import About from './sections/About'
 import Skills from './sections/Skills'
@@ -8,12 +10,31 @@ import Contact from './sections/Contact'
 function App() {
   return (
     <>
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Parcours />
-      <Contact />
+      <Header />
+
+      <section id="hero">
+        <Hero />
+      </section>
+
+      <section id="about">
+        <About />
+      </section>
+
+      <section id="skills">
+        <Skills />
+      </section>
+
+      <section id="projects">
+        <Projects />
+      </section>
+
+      <section id="parcours">
+        <Parcours />
+      </section>
+
+      <section id="contact">
+        <Contact />
+      </section>
     </>
   )
 }
