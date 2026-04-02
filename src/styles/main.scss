@@ -4,7 +4,7 @@
 
 :root {
   /*  fond principal  */
-  --color-bg: red;
+  --color-bg: #151527;
 
   /* sections */
   --color-section: #1f1f35;
@@ -173,19 +173,33 @@ section {
   background-color: var(--color-bg);
 }
 
-.about__content {
-  max-width: 800px;
+/* CONTAINER */
+.about__container {
+  max-width: 1000px;
   margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
 }
 
-.about h2 {
+/* TEXTE */
+.about__text {
+  flex: 1;
+  max-width: 500px; /* 🔥 évite que le texte prenne toute la largeur */
+}
+
+.about__text h2 {
   font-size: 2rem;
   margin-bottom: 20px;
+  font-weight: 600; /* 🔥 titre un peu plus fort */
 }
 
-.about p {
+.about__text p {
   margin-bottom: 15px;
   line-height: 1.6;
+  font-weight: 500; /* 🔥 texte plus lisible */
 }
 
 /* ============================= */
@@ -200,31 +214,76 @@ section {
 
 .skills h2 {
   font-size: 2rem;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  justify-content: center;
 }
 
-/* Container des skills */
+/* CONTAINER */
 .skills__container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 20px;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
-/* Card skill */
+/* FRONT + BACK */
+.skills__row {
+  display: flex;
+  gap: 40px;
+}
+
+/* BLOCK */
+.skills__block {
+  flex: 1;
+  text-align: left;
+}
+
+.skills__block h3 {
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+/* GRID*/
+.skills__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+/* CARD */
 .skill-card {
-  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
   padding: 15px;
   border-radius: 15px;
-  font-weight: 500;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
+
+  transition: 0.3s;
 }
 
-/* Hover */
+/* LOGO */
+.skill-card img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* TEXTE */
+.skill-card span {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/* HOVER */
 .skill-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
 }
 
 /* ============================= */

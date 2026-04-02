@@ -1,26 +1,33 @@
+
 function About() {
   return (
-    <section className="about">
-      <div className="about__content">
-        <h2>À propos</h2>
-        <p>
-          Je suis Sara Dalleau, développeuse web junior passionnée par la création d’interfaces modernes et accessibles.
-        </p>
-        <p>
-          Actuellement en formation chez OpenClassrooms, j’ai développé des compétences en HTML, CSS, JavaScript et React, ainsi qu’en back-end avec Node.js et MongoDB.
-        </p>
-        <p>
-          À travers mes projets, j’ai appris à structurer une application, gérer un projet de A à Z et adopter des bonnes pratiques de développement.
-        </p>
-        <p>
-          Je suis particulièrement reconnue pour ma capacité à apprendre rapidement, m’adapter et résoudre des problèmes.
-        </p>
-        <p>
-          Aujourd’hui, je recherche une opportunité pour évoluer au sein d’une équipe et continuer à progresser en tant que développeuse.
-        </p>
+    <section id="about" className="about">
+      <div className="about__container">
+
+        {/* TEXTE */}
+        <div className="about__text">
+          <h2>À propos de moi</h2>
+
+          <p>
+            Je suis développeuse web en formation, spécialisée en front-end, avec une approche orientée utilisateur et fonctionnalité.
+          </p>
+
+          <p>
+            Je conçois des interfaces modernes en React, tout en développant progressivement mes compétences en back-end avec Node.js.
+          </p>
+
+          <p>
+            Je travaille principalement sur des projets concrets, ce qui me permet de structurer mes applications, améliorer mon code et progresser rapidement.
+          </p>
+
+          <p>
+            Aujourd’hui, je cherche à rejoindre une équipe pour continuer à apprendre, gagner en expérience et travailler sur des projets réels.
+          </p>
+        </div>
+
       </div>
     </section>
-  )
+  );
 }
 
-export default About
+export default About;

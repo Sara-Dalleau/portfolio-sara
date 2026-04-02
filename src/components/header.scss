@@ -3,39 +3,50 @@
   top: 0;
   left: 0;
   width: 100%;
+  height: 55px;
   z-index: 1000;
-
-  /* 🔥 RESET TOTAL */
   border: none !important;
   box-shadow: none !important;
-
-  /* 🔥 FOND CLEAN */
   background: rgba(15, 23, 42, 0.5);
   backdrop-filter: blur(10px);
 }
 
-/* 🔥 CONTAINER = STRUCTURE */
+/* CONTAINER */
 .header__container {
+  height: 100%;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 15px 40px;
+  padding: 0 20px;
 }
 
-/* LOGO */
+/* LOGO CONTAINER */
 .header__logo {
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-  font-size: 1.5rem;
-  letter-spacing: 0.5px;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
+/* IMAGE */
+.header__logo img {
+  height: 48px;
+  width: auto;
+
+  object-fit: contain;
+
+  display: block;
+
+  border-radius: 0;
+  mix-blend-mode: normal;
+  box-shadow: none;
+}
 /* NAV */
 .header__nav {
   display: flex;
   gap: 25px;
+  align-items: center;
 }
 
 /* LIENS */
@@ -44,8 +55,6 @@
   color: #e2e8f0;
   font-size: 14px;
   transition: 0.3s;
-
-  /* 🔥 RESET ICI AUSSI */
   border: none;
 }
 

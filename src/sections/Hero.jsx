@@ -15,7 +15,7 @@ function Hero() {
         <h2>Développeuse web junior</h2>
 
         <p>
-        Construire, améliorer, donner vie à vos idées à travers le web.
+        Je conçois des interfaces modernes et fonctionnelles, pensées pour l’utilisateur
         </p>
 
         <div className="hero__buttons">
