@@ -13,9 +13,11 @@ function Header() {
     
 
     <nav className="header__nav">
+      <a href="#hero">Accueil</a>
       <a href="#about">À propos</a>
       <a href="#skills">Compétences</a>
       <a href="#projects">Projets</a>
+      <a href="#parcours">Parcours</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
