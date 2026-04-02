@@ -7,6 +7,7 @@ import sassLogo from "../assets/logos/sass.svg";
 import nodeLogo from "../assets/logos/nodejs.svg";
 import expressLogo from "../assets/logos/express.svg";
 import mongoLogo from "../assets/logos/mongodb.svg";
+import apiLogo from "../assets/logos/api.svg";
 
 import gitLogo from "../assets/logos/git.svg";
 import githubLogo from "../assets/logos/github.svg";
@@ -28,15 +29,13 @@ function Skills() {
             <h3>Front-end</h3>
 
             <div className="skills__list">
-              <div className="skill-card">
+            <div className="skill-card skill-card--double">
+              <div className="double-logo">
                 <img src={htmlLogo} alt="HTML" />
-                <span>HTML</span>
-              </div>
-
-              <div className="skill-card">
                 <img src={cssLogo} alt="CSS" />
-                <span>CSS</span>
               </div>
+              <span>HTML / CSS</span>
+            </div>
 
               <div className="skill-card">
                 <img src={jsLogo} alt="JavaScript" />
@@ -73,6 +72,11 @@ function Skills() {
               <div className="skill-card">
                 <img src={mongoLogo} alt="MongoDB" />
                 <span>MongoDB</span>
+              </div>
+
+              <div className="skill-card">
+                <img src={apiLogo} alt="API REST" />
+                <span>API REST</span>
               </div>
             </div>
           </div>
