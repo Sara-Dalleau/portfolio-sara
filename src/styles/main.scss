@@ -812,3 +812,25 @@ img[alt="Express"] {
     flex-direction: column;
   }
 }
+
+/* ACCESSIBILITÉ - éléments invisibles mais lisibles par les lecteurs d'écran */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ACCESSIBILITÉ - focus clavier */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid #a855f7;
+  outline-offset: 2px;
+}

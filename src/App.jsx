@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Header />
-
+      <main>
       <section id="hero">
         <Hero />
       </section>
@@ -35,6 +35,7 @@ function App() {
       <section id="contact">
         <Contact />
       </section>
+      </main>
     </>
   )
 }

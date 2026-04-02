@@ -47,13 +47,19 @@ function Contact() {
         <form ref={form} onSubmit={sendEmail} className="contact-form">
 
           <div className="form-row">
+            {/* LABEL INVISIBLE */}
+            <label htmlFor="lastname" className="sr-only">Nom</label>
             <input
+              id="lastname"
               type="text"
               name="user_lastname"
               placeholder="Nom"
               required
             />
+
+            <label htmlFor="firstname" className="sr-only">Prénom</label>
             <input
+              id="firstname"
               type="text"
               name="user_firstname"
               placeholder="Prénom"
@@ -61,14 +67,18 @@ function Contact() {
             />
           </div>
 
+          <label htmlFor="email" className="sr-only">Email</label>
           <input
+            id="email"
             type="email"
             name="user_email"
             placeholder="Email"
             required
           />
 
+          <label htmlFor="message" className="sr-only">Message</label>
           <textarea
+            id="message"
             name="message"
             placeholder="Votre message ..."
             rows="5"

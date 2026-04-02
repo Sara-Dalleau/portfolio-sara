@@ -67,7 +67,7 @@ function Projects() {
   ]
 
   return (
-    <section className="projects">
+    <section className="projects" id="projects">
       <h2>Mes projets</h2>
 
       <div className="projects__container">
@@ -76,7 +76,10 @@ function Projects() {
 
             {/* CARD */}
             <div className="project-card">
-              <img src={project.image} alt={project.title} />
+              <img
+                src={project.image}
+                alt={`Projet ${project.title} - ${project.type} développé avec ${project.stack.map(tech => tech.name).join(", ")}`}
+              />
 
               <div className="card-content">
                 <p className="project-date">{project.date}</p>
