@@ -4,7 +4,7 @@ function Parcours() {
       <h2>Parcours</h2>
 
       <p className="parcours-intro">
-      Après une expérience en restauration puis en ressources humaines, j’ai choisi de me réorienter vers le développement web suite à une immersion à l’école 42, qui a confirmé mon intérêt pour ce domaine.      </p>
+      Après une expérience en restauration puis en ressources humaines, j’ai choisi de me réorienter vers le développement web suite à une immersion à l’école 42, qui a confirmé mon intérêt pour ce domaine.</p>
 
       <div className="parcours__timeline">
 

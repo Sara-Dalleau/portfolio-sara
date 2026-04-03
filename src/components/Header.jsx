@@ -1,27 +1,41 @@
+import { useState } from "react";
 import "./header.scss";
 import logo from "../assets/logo2.png";
 
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header className="header">
       <div className="header__container">
-      <div className="header__logo">
-        <a href="#hero">
-          <img src={logo} alt="logo Sara" />
-        </a>
-      </div>
-    
 
-    <nav className="header__nav">
-      <a href="#hero">Accueil</a>
-      <a href="#about">À propos</a>
-      <a href="#skills">Compétences</a>
-      <a href="#projects">Projets</a>
-      <a href="#parcours">Parcours</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+        {/* LOGO */}
+        <div className="header__logo">
+          <a href="#hero">
+            <img src={logo} alt="logo Sara" />
+          </a>
+        </div>
+
+        {/* BURGER */}
+        <div
+          className="burger"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          ☰
+        </div>
+
+        {/* NAV */}
+        <nav className={`header__nav ${menuOpen ? "active" : ""}`}>
+          <a href="#hero" onClick={() => setMenuOpen(false)}>Accueil</a>
+          <a href="#about" onClick={() => setMenuOpen(false)}>À propos</a>
+          <a href="#skills" onClick={() => setMenuOpen(false)}>Compétences</a>
+          <a href="#projects" onClick={() => setMenuOpen(false)}>Projets</a>
+          <a href="#parcours" onClick={() => setMenuOpen(false)}>Parcours</a>
+          <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+        </nav>
+
+      </div>
+    </header>
   );
 }
 

@@ -6,7 +6,7 @@ function About() {
 
         {/* TEXTE */}
         <div className="about__text">
-          <h2>À propos de moi</h2>
+          <h2>À propos</h2>
 
           <p>
             Je suis développeuse web en formation, spécialisée en front-end, avec une approche orientée utilisateur et fonctionnalité.

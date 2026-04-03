@@ -1,9 +1,5 @@
-/* ==========================*/
-/* DESIGN SYSTEM - COULEURS */
-/* ======================= */
-
 :root {
-  /*  fond principal  */
+  /* fond principal */
   --color-bg: #151527;
 
   /* sections */
@@ -28,33 +24,47 @@
 /* ============== */
 /*  STYLE GLOBAL */
 /* ============ */
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
-  margin: 0;
   font-family: 'Inter', sans-serif;
-  
-  background: linear-gradient(
-    135deg,
-    #f4f2fb 0%,
-    #e9e4ff 40%,
-    #f4f2fb 100%
-  );
 }
 
-html {
-  scroll-behavior: smooth;
+#root {
+  width: 100%;
+}
+
+main {
+  width: 100%;
 }
 
 section {
+  width: 100%;
   scroll-margin-top: 80px;
 }
 
+/* sections spécifiques */
 .skills,
 .parcours {
   background-color: #f3f0ff;
 }
-
 
 /* ===============*/
 /*  HERO SECTION */
@@ -66,7 +76,7 @@ section {
   align-items: center;
   justify-content: flex-end;
 
-  padding: 0 80px;
+  padding: 0 20px;
   text-align: right;
   margin-top: 0;
   background-size: cover;
@@ -163,13 +173,61 @@ section {
 .accent {
   color: #8b5cf6;
 }
+@media (max-width: 768px) {
+
+  .hero {
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    background-position: left center;
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+
+  .hero__content {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+    margin-bottom: 18px;
+  }
+
+  /* BOUTONS */
+  .hero__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  .hero__buttons a {
+    padding: 10px 16px;
+    font-size: 13px;
+    border-radius: 20px;
+  }
+}
 
 /* =============== */
 /*  ABOUT SECTION */
 /* ============= */
 
 .about {
-  padding: 80px 20px;
+  padding: 40px 20px 50px;
   background-color: var(--color-bg);
 }
 
@@ -201,13 +259,28 @@ section {
   line-height: 1.6;
   font-weight: 500;
 }
+/*RESPONSIVE*/
+
+@media (max-width: 768px) {
+  .about {
+    padding: 30px 20px;
+  }
+
+  .about__text h2 {
+    margin-bottom: 12px;
+  }
+
+  .about__text p {
+    margin-bottom: 10px;
+  }
+}
 
 /* ============================= */
-/*  SKILLS SECTION */
+/*      SKILLS SECTION           */
 /* ============================= */
 
 .skills {
-  padding: 80px 20px;
+  padding: 40px 20px 50px;
   background-color: var(--color-section);
   text-align: center;
 }
@@ -295,13 +368,45 @@ section {
   transform: translateY(-5px);
   box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
 }
+/*RESPONSIVE*/
+@media (max-width: 768px) {
+  .skills {
+    padding: 30px 20px 50px;
+  }
+
+  .skills h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+
+  .skills__container {
+    gap: 25px;
+  }
+  .skills__row {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .skills__list {
+    grid-template-columns: 1fr;
+  }
+
+  .skills__block {
+    width: 100%;
+    text-align: center;
+  }
+
+  .skill-card {
+    width: 100%;
+  }
+}
 
 /* ============================= */
-/*    PROJECTS SECTION */
+/*    PROJECTS SECTION           */
 /* ============================= */
 
 .projects {
-  padding: 80px 20px;
+  padding: 40px 20px 50px;
   background-color: var(--color-bg);
 
   display: flex;
@@ -339,7 +444,8 @@ section {
   overflow: hidden;
   border-radius: 16px;
 
-  width: 520px;
+  width: 100%;
+  max-width: 520px;
   height: 260px;
 
   flex-shrink: 0;
@@ -541,18 +647,76 @@ img[alt="Express"] {
   }
 }
 
+@media (max-width: 900px) {
+  .projects__container {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
+
+  /* SECTION */
+  .projects {
+    padding: 30px 20px 50px;
+  }
+
+  .projects h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+
+  /* CARD IMAGE */
   .project-card {
     height: 240px;
   }
 
+  /* GLOBAL TAGS */
   .project-tags {
-    align-items: flex-start;
+    display: flex;
     flex-direction: column;
+    gap: 10px;
   }
 
+  /* TAGS GAUCHE */
+  .tags-left {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* LOGOS DROITE */
   .tags-right {
-    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    flex-wrap: nowrap;
+    overflow: hidden;
+    min-width: 0;
+  }
+
+  /* LOGOS TAILLE */
+  .tech-logo img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+  }
+
+  .tech-logo img.nodejs,
+  .tech-logo img.express {
+    width: 36px;
+    height: 36px;
+  }
+
+  .tech-logo img.mongodb {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* DETAILS */
+  .project-details {
+    padding: 15px;
+    gap: 10px;
   }
 }
 
@@ -562,7 +726,7 @@ img[alt="Express"] {
 /* ============================= */
 
 .parcours {
-  padding: 80px 20px;
+  padding: 40px 20px 50px;
   background-color: var(--color-section);
   text-align: center;
 }
@@ -588,9 +752,7 @@ img[alt="Express"] {
   gap: 20px;
 }
 
-
 /* BARRE TIMELINE  */
-
 
 .parcours__timeline {
   position: relative;
@@ -674,11 +836,36 @@ img[alt="Express"] {
   font-size: 13px;
   margin-top: 8px;
 }
+/*REPONSIVE*/
+@media (max-width: 768px) {
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
+  /* SECTION */
+  .parcours {
+    padding: 30px 20px 50px;
+  }
+
+  .parcours h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+
+  /* GRID > COLONNE */
   .parcours__timeline {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .parcours__timeline::before {
+    display: none;
+  }
+
+  .parcours__timeline::after {
+    display: none;
+  }
+
+  /* CARD */
+  .parcours-card {
+    padding: 18px;
   }
 }
 
@@ -687,7 +874,7 @@ img[alt="Express"] {
 /* ============================= */
 
 .contact {
-  padding: 80px 20px;
+  padding: 40px 20px 50px;
   background-color: var(--color-bg);
   text-align: center;
 }
@@ -806,11 +993,21 @@ img[alt="Express"] {
   text-decoration: underline;
 }
 
-/* RESPONSIVE */
-@media (max-width: 600px) {
-  .form-row {
-    flex-direction: column;
+@media (max-width: 768px) {
+
+  .contact {
+    padding: 30px 20px 50px;
   }
+
+  .contact h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .contact-intro {
+    margin-bottom: 20px;
+  }
+
 }
 
 /* ACCESSIBILITÉ - éléments invisibles mais lisibles par les lecteurs d'écran */

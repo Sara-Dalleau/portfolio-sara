@@ -62,3 +62,72 @@
 .header__nav a:hover {
   color: #8b5cf6;
 }
+
+/* BURGER */
+.burger {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+  margin-left: auto;
+  z-index: 1002;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .header__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* LOGO CENTRÉ */
+  .header__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001;
+  }
+
+  /* BURGER */
+  .burger {
+    display: block;
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+
+    position: relative;
+    z-index: 1002;
+  }
+
+  /* NAV */
+  .header__nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    background: rgba(15, 23, 42, 0.95);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    padding: 20px 0;
+
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+
+    transition: all 0.3s ease;
+  }
+
+  .header__nav.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

@@ -68,7 +68,7 @@ function Projects() {
 
   return (
     <section className="projects" id="projects">
-      <h2>Mes projets</h2>
+      <h2>Projets</h2>
 
       <div className="projects__container">
         {projects.map((project, index) => (
