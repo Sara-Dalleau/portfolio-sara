@@ -1,16 +1,87 @@
-# React + Vite
+# Portfolio — Sara Dalleau
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+Ce projet est un portfolio développé dans le cadre du Projet 8 de la formation Développeur Web chez OpenClassrooms.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+L’objectif est de concevoir un site web professionnel permettant de présenter mon profil, mes compétences et mes projets, tout en respectant les bonnes pratiques en termes de développement, d’accessibilité et de responsive design.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies utilisées
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- SCSS (Sass)
+- JavaScript
+- EmailJS (formulaire de contact)
+- Git / GitHub
+- Vercel (déploiement)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Compétences développées
+
+- Création d’une application React structurée en composants
+- Gestion du state (useState)
+- Mise en place d’un routing simple par ancres
+- Intégration d’un formulaire de contact fonctionnel
+- Responsive design (mobile / tablette / desktop)
+- Accessibilité (labels, navigation clavier, aria)
+- Optimisation SEO (balises, alt, structure HTML)
+- Organisation du code (SCSS modulaire, structure claire)
+
+---
+
+## Objectifs du projet
+
+- Créer un portfolio professionnel et cohérent
+- Mettre en valeur mes projets et compétences
+- Appliquer les bonnes pratiques front-end
+- Proposer une interface utilisateur claire et moderne
+
+---
+
+## 📂 Structure du projet
+
+src/
+├── components/
+│ ├── Header
+│ ├── Footer
+│
+├── sections/
+│ ├── Hero
+│ ├── About
+│ ├── Skills
+│ ├── Projects
+│ ├── Parcours
+│ ├── Contact
+│
+├── assets/
+├── styles/
+
+
+---
+
+## Installation
+
+1. Cloner le repository :
+
+```bash
+git clone https://github.com/Sara-Dalleau/portfolio-sara.git
+
+2. Installer les dépendances :
+npm install
+
+3. Lancer le projet :
+npm run dev
+
+🌐 Déploiement
+
+Le projet est déployé avec Vercel.
+
+📈 Améliorations possibles
+Ajout de nouveaux projets
+Mise en place d’un backend pour rendre les données dynamiques
+Ajout d’animations avancées
+Optimisation des performances
