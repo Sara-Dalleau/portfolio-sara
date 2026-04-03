@@ -46,6 +46,7 @@ function Projects() {
       context:
         "Application web de location immobilière avec affichage dynamique et routing.",
       github: "https://github.com/Sara-Dalleau/kasa.git",
+      demo: "https://kasa-9rrytxbh1-sara-dalleaus-projects.vercel.app/",
 
       objectives:
         "Développer une application web avec React incluant navigation dynamique et affichage des logements.",
@@ -104,6 +105,18 @@ function Projects() {
                     <img src={githubLogo} alt="GitHub" />
                     GitHub
                   </a>
+
+                  {/* BOUTON DEMO */}
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="tag tag--demo"
+                    >
+                      Voir le site
+                    </a>
+                  )}
 
                   <span className="tag tag--type">
                     {project.type}
