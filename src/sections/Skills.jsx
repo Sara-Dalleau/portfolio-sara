@@ -17,7 +17,7 @@ import vercelLogo from "../assets/logos/vercel.svg";
 function Skills() {
   return (
     <section id="skills" className="skills">
-      <h2>Compétences</h2>
+      <h2>Mes compétences</h2>
 
       <div className="skills__container">
 

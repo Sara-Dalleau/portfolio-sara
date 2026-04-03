@@ -40,7 +40,7 @@ function Projects() {
 
     {
       title: "Kasa",
-      date: "03-2026",
+      date: "02-2026",
       image: kasaImg,
       type: "Front-End",
       context:
@@ -68,7 +68,7 @@ function Projects() {
 
   return (
     <section className="projects" id="projects">
-      <h2>Projets</h2>
+      <h2>Mes projets</h2>
 
       <div className="projects__container">
         {projects.map((project, index) => (
