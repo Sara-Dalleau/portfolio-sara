@@ -2,7 +2,7 @@ import bgImage from "../assets/hero1.png";
 
 function Hero() {
   return (
-    <div
+    <section
       className="hero"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
@@ -23,7 +23,7 @@ function Hero() {
           <a href="#contact" className="secondary">Me contacter</a>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -7,24 +7,25 @@ function Footer() {
     <footer className="footer">
       <div className="footer__container">
 
-        {/* LOGO GAUCHE */}
+        {/* LOGO */}
         <a href="#hero" className="footer__logo">
-          <img src={logo} alt="logo Sara" />
+          <img src={logo} alt="Logo Sara Dalleau" />
         </a>
 
-        {/* CENTRE */}
+        {/* COPYRIGHT */}
         <p className="footer__copy">
-          © 2026 Sara Dalleau
+          © {new Date().getFullYear()} Sara Dalleau
         </p>
 
-        {/* DROITE */}
+        {/* GITHUB */}
         <a
           href="https://github.com/Sara-Dalleau"
           target="_blank"
           rel="noopener noreferrer"
           className="footer__github"
+          aria-label="Voir le profil GitHub de Sara Dalleau"
         >
-          <img src={githubLogo} alt="GitHub" />
+          <img src={githubLogo} alt="" />
         </a>
 
       </div>

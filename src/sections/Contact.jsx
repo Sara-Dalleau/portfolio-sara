@@ -3,35 +3,39 @@ import emailjs from "@emailjs/browser";
 
 function Contact() {
   const form = useRef();
+
   const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
 
+    setLoading(true);
+
     emailjs
       .sendForm(
-        "service_6rm5twy",
-        "template_s68b9zz",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
-        "vlO7xGv23UkQQKhCK"
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
-      .then(
-        () => {
-          setStatus("success");
-          form.current.reset();
+      .then(() => {
+        setStatus("success");
+        setLoading(false);
+        form.current.reset();
 
-          setTimeout(() => {
-            setStatus("");
-          }, 4000);
-        },
-        () => {
-          setStatus("error");
+        setTimeout(() => {
+          setStatus("");
+        }, 4000);
+      })
+      .catch(() => {
+        setStatus("error");
+        setLoading(false);
 
-          setTimeout(() => {
-            setStatus("");
-          }, 4000);
-        }
-      );
+        setTimeout(() => {
+          setStatus("");
+        }, 4000);
+      });
   };
 
   return (
@@ -47,7 +51,6 @@ function Contact() {
         <form ref={form} onSubmit={sendEmail} className="contact-form">
 
           <div className="form-row">
-            {/* LABEL INVISIBLE */}
             <label htmlFor="lastname" className="sr-only">Nom</label>
             <input
               id="lastname"
@@ -85,9 +88,10 @@ function Contact() {
             required
           ></textarea>
 
-          <button type="submit">Envoyer</button>
+          <button type="submit" disabled={loading}>
+            {loading ? "Envoi..." : "Envoyer"}
+          </button>
 
-          {/* MESSAGE */}
           {status === "success" && (
             <p className="form-message success">
               ✨ Message envoyé avec succès, je vous répondrai rapidement !

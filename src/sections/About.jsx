@@ -10,19 +10,19 @@ function About() {
           <h2>À propos de moi</h2>
 
           <p>
-            Je suis développeuse web en formation, spécialisée en front-end, avec une approche orientée utilisateur et fonctionnalité.
+            Développeuse web en formation, je me spécialise en front-end avec React tout en développant mes compétences en back-end avec Node.js.
           </p>
 
           <p>
-            Je conçois des interfaces modernes en React, tout en développant progressivement mes compétences en back-end avec Node.js.
+            J’accorde une attention particulière à l’expérience utilisateur, à la qualité du code et à la structuration des projets.
           </p>
 
           <p>
-            Je travaille principalement sur des projets concrets, ce qui me permet de structurer mes applications, améliorer mon code et progresser rapidement.
+            À travers des projets concrets, j’ai appris à concevoir des interfaces modernes, gérer des données dynamiques et construire des applications complètes.
           </p>
 
           <p>
-            Aujourd’hui, je cherche à rejoindre une équipe pour continuer à apprendre, gagner en expérience et travailler sur des projets réels.
+            Je recherche aujourd’hui une opportunité pour continuer à progresser et contribuer à des projets réels au sein d’une équipe.
           </p>
         </div>
 

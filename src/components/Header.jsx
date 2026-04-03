@@ -12,19 +12,21 @@ function Header() {
         {/* LOGO */}
         <div className="header__logo">
           <a href="#hero">
-            <img src={logo} alt="logo Sara" />
+            <img src={logo} alt="Logo Sara Dalleau" />
           </a>
         </div>
 
         {/* BURGER */}
-        <div
+        <button
           className="burger"
           onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Ouvrir le menu"
+          aria-expanded={menuOpen}
         >
           ☰
-        </div>
+        </button>
 
-        {/* NAV */}
+        {/* NAVIGATION */}
         <nav className={`header__nav ${menuOpen ? "active" : ""}`}>
           <a href="#hero" onClick={() => setMenuOpen(false)}>Accueil</a>
           <a href="#about" onClick={() => setMenuOpen(false)}>À propos</a>
