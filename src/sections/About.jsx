@@ -10,7 +10,7 @@ function About() {
           <h2>À propos de moi</h2>
 
           <p>
-            Développeuse web en formation, je me spécialise en front-end avec React tout en développant mes compétences en back-end avec Node.js.
+            Développeuse web, basée en France. Je me spécialise en front-end avec React tout en développant mes compétences en back-end avec Node.js.
           </p>
 
           <p>

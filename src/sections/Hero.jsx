@@ -12,7 +12,7 @@ function Hero() {
           Moi c'est <span className="accent">Sara </span>
         </h1>
 
-        <h2>Développeuse web junior</h2>
+        <h2>Développeuse web junior React</h2>
 
         <p>
         Je conçois des interfaces modernes et fonctionnelles, pensées pour l’utilisateur
