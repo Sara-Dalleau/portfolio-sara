@@ -2,15 +2,20 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 function Contact() {
+  //recup formulaire html pour lenvoyer a emailJS
   const form = useRef();
 
   const [status, setStatus] = useState("");
-  const [loading, setLoading] = useState(false);
 
+  const [loading, setLoading] = useState(false);
+  //Loading pour savoir si le mail est en cours d’envoi
+
+  //envoie le formulaire
   const sendEmail = (e) => {
     e.preventDefault();
 
     setLoading(true);
+    // active le mode "envoi... sur le btn"
 
     emailjs
       .sendForm(
@@ -20,10 +25,17 @@ function Contact() {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(() => {
+        
+        // on affiche message succès
         setStatus("success");
+        
+        // on arrête le loading
         setLoading(false);
+
+        // on vide le formulaire
         form.current.reset();
 
+        // on enlève le message après 4 secondes
         setTimeout(() => {
           setStatus("");
         }, 4000);
@@ -49,9 +61,11 @@ function Contact() {
 
       <div className="contact__container">
         <form ref={form} onSubmit={sendEmail} className="contact-form">
+        {/* form lié à useRef + fonction d’envoi */}
 
           <div className="form-row">
             <label htmlFor="lastname" className="sr-only">Nom</label>
+            {/* label caché visuellement mais utile accessibilité */}
             <input
               id="lastname"
               type="text"
@@ -91,6 +105,9 @@ function Contact() {
           <button type="submit" disabled={loading}>
             {loading ? "Envoi..." : "Envoyer"}
           </button>
+          {/* bouton :
+              - désactivé pendant l’envoi
+              - texte dynamique */}
 
           {status === "success" && (
             <p className="form-message success">
