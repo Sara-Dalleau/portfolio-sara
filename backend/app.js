@@ -1,6 +1,14 @@
 const express = require ('express');
 const app = express (); 
+const mongoose = require('mongoose');
+require('dotenv').config();
 
+// CONNEXION BASE DE DONNÉE
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log('Connexion à MongoDB réussie !'))
+  .catch((error) => console.log('Erreur MongoDB :', error));
+
+//
 app.use(express.json());
 
 //CORS
@@ -53,7 +61,7 @@ app.put('/api/projects/:id', (req, res, next) => {
   const project = projects.find(project => project._id === id);
 
   if (!project) {
-    
+
     res.status(404).json({ message: "Le projet n'existe pas"});
     return;
   }
