@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 });
 
 //DATA TEMPORAIRE
-const projects = [
+let projects = [
   {
     _id: 'abcd321',
     title: 'Projet 1',
@@ -32,20 +32,44 @@ const projects = [
   },
 ];
 
+//POST
 app.post('/api/projects', (req, res, next) => {
+
   projects.push(req.body);
   res.status(201).json(req.body);
 });
 
+//GET
 app.get('/api/projects', (req, res, next) => {
+
   res.status(200).json(projects);
 });
 
-app.put('/api/projects', (req, res, next) => {
+//PUT
+app.put('/api/projects/:id', (req, res, next) => {
 
-});
+  const id = req.params.id;
 
-app.delete('/api/projects', (req, res, next) => {
+  const project = projects.find(project => project._id === id);
+
+  if (!project) {
+    
+    res.status(404).json({ message: "Le projet n'existe pas"});
+    return;
+  }
   
+  project.title = req.body.title;
+  project.description = req.body.description;
+  
+  res.status(200).json({ message: "Projet modifié" });
 });
+
+//DELETE
+app.delete('/api/projects/:id', (req, res, next) => {
+
+  const id = req.params.id;
+  projects = projects.filter(project => project._id !== id);
+  res.status(200).json({ message: "Projet supprimé" });
+});
+
 module.exports = app;
