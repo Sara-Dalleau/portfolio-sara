@@ -2,6 +2,7 @@ const express = require ('express');
 const app = express (); 
 const mongoose = require('mongoose');
 require('dotenv').config();
+const Project = require ("./models/project");
 
 // CONNEXION BASE DE DONNÉE
 mongoose.connect(process.env.MONGO_URI)
@@ -43,12 +44,22 @@ let projects = [
 //POST
 app.post('/api/projects', (req, res, next) => {
 
-  projects.push(req.body);
-  res.status(201).json(req.body);
+  const project = new Project(req.body);
+
+  project.save()
+    .then(() => res.status(201).json(project))
+    .catch(error => res.status(400).json({ error }));
 });
 
 //GET
 app.get('/api/projects', (req, res, next) => {
+
+  Project.find()
+    .then(projects => {
+      res.status(200).json(projects);
+    })
+    .catch(error => { res.status(500).json({message: "Erreur serveur"});
+    });
 
   res.status(200).json(projects);
 });
